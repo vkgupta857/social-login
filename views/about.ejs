@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% if (title) { %>
+    <title><%= title %> | Social Login</title>
+    <% } else { %>
+    <title>Welcome to Social Login</title>
+    <% } %>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+
+    <%- include('partials/header.ejs') -%>
+
+    <div class="container">
+        <h3>About</h3>
+
+        <p>This project <b>Social Login</b> is developed by Vinod Kumar Gupta.</p>
+        <p>
+            Email: <a href="mailto:vkgupta857@gmail.com" title="Send mail">vkgupta857@gmail.com</a>
+            <br>
+            Github Link: <a href="https://github.com/vkgupta857" title="Go to Github"
+                target="_blank">https://github.com/vkgupta857</a>
+            <br>
+            LinkedIn Link: <a href="https://linkedin.com/in/vkgupta857" title="Go to LinkedIn"
+                target="_blank">https://linkedin.com/in/vkgupta857</a>
+        </p>
+
+        <p>Download Resume <a href="/files/VINOD_KUMAR_GUPTA.pdf" title="Download resume here" download>here</a></p>
+
+    </div>
+
+    <%- include('partials/footer.ejs') -%>
+
+    <script type="text/javascript" src="/javascripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/javascripts/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

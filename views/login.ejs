@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% if (title) { %>
+    <title><%= title %> | Social Login</title>
+    <% } else { %>
+    <title>Welcome to Social Login</title>
+    <% } %>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+
+    <%- include('partials/header.ejs') -%>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h4 class="text-center">Login to continue</h4>
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <br>
+                        <a href="/auth/google" title="Continue with Google"
+                            class="btn btn-large btn-block btn-danger">Login with Google</a>
+                        <br>
+                        <!--
+                        <form method="POST" target="/login">
+                            <div class="form-group">
+                                <label for="username">Username</label>
+                                <input type="text" id="username" name="username" class="form-control form-control-sm" placeholder="e.g. abc@exmaple.com" >
+                            </div>
+                            <div class="form-group">
+                                <label for="username">Password</label>
+                                <input type="password" id="password" name="password" class="form-control form-control-sm" placeholder="Enter password" >
+                            </div>
+                            <div class="form-group justify-contents-between">
+                                <button type="reset" class="btn btn-sm btn-secondary">Reset</button>
+                                <button type="submit" class="btn btn-sm btn-primary">Submit</button>
+                            </div>
+                        </form>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/footer.ejs') -%>
+
+    <script type="text/javascript" src="/javascripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/javascripts/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

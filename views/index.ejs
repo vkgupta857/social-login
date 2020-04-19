@@ -1,11 +1,67 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% if (title) { %>
+    <title><%= title %> | Social Login</title>
+    <% } else { %>
+    <title>Welcome to Social Login</title>
+    <% } %>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+</head>
+
+<body>
+
+    <%- include('partials/header.ejs') -%>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h3>Welcome to Social Login</h3>
+                <p>This app is the developed by <a href="/about" title="Know more about Vinod">Vinod Kumar Gupta</a> to complete the assignment requirement asked by Kloudspot Inc.</p>
+                <p>The app demonstrates user authentication through <b>Google+ API</b>.</p>
+            </div>
+            <div class="col-md-4">
+                <br>
+                <a href="/auth/login" title="Go to Login Page" class="btn btn-block btn-large btn-danger">Go to
+                    Login</a>
+            </div>
+        </div>
+
+
+        <hr>
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Technology Stack</h5>
+                <ul>
+                    <li>MongoDB (v3.6)</li>
+                    <li>Express Framework (v4.6)</li>
+                    <li>Node.js (v12.16)</li>
+                    <li>EJS (Embedded JavaScript)</li>
+                    <li>Bootstrap 4.4</li>
+                    <li>Passport.js</li>
+                    <li>Google+ API (OAuth 2.0)</li>
+                </ul>
+            </div>
+            <div class="col-md-8">
+                <h5>Requirements (must) for running the app</h5>
+                <ul>
+                    <li><b>clientID</b> and <b>clientSecret</b> should be added in <code>/config/keys.js</code> at appropriate
+                        place.</li>
+                    <li>App is running on at <b>http://localhost:3000</b>, as </li>
+                    <li>MongoDB should be installed and running (at port <b>27017</b>) in the system.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/footer.ejs') -%>
+
+    <script type="text/javascript" src="/javascripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/javascripts/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
